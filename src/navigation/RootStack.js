@@ -1,20 +1,20 @@
-import React, { Component } from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import React, { Component } from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
 import HomeScreen from "../screens/HomeScreen";
-import ArtistsScreen from '../screens/ArtistsScreen';
+import ArtistsScreen from "../screens/ArtistsScreen";
 
 const Stack = createStackNavigator();
 
 export default class RootStack extends Component {
-  render(){
+  render() {
     return (
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen
             name="Home"
             component={HomeScreen}
-            options={{title: 'Featured Playlists'}}
+            options={{ title: "Featured Playlists" }}
           />
           <Stack.Screen name="Artists" component={ArtistsScreen} />
         </Stack.Navigator>
